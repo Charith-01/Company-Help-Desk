@@ -61,7 +61,7 @@ $conn->close();
             </div>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="#knowledgebase">Knowledgebase</a></li>
                     <li><a href="#files">Files</a></li>
                     <li><a href="#contact" class="btn">Contact Support</a></li>
@@ -69,6 +69,14 @@ $conn->close();
             </nav>
         </div>
     </header>
+
+    <main>
+            <style>
+                body {
+                  background-image: url('./Images/background.png');
+                    
+                }
+             </style>
 
     <!-- Signup Form Section -->
     <section class="signup-section">
@@ -115,5 +123,7 @@ $conn->close();
             <p>&copy; 2024 ApexCoders</p>
         </div>
     </footer>
+
+    </main>
 </body>
 </html>

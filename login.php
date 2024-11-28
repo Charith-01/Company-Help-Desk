@@ -25,8 +25,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // Verify the password
             if (password_verify($password, $user['password'])) {
-                $success = 'Login successful!';
-                exit();
+                session_start();
+                $_SESSION['user_id'] = $user['id'];
+                $_SESSION['full_name'] = $user['full_name'];
+                header("Location: index.php");
+                exit;
             } else {
                 $error = 'Incorrect password.';
             }
@@ -49,6 +52,7 @@ $conn->close();
     <link rel="stylesheet" href="CSS/login.css">
 </head>
 <body>
+    
     <!-- Header -->
     <header class="header">
         <div class="container">
