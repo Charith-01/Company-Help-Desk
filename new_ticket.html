@@ -33,7 +33,7 @@
         <div class="container">
             <h2>Raise a New Ticket</h2>
             <p>Please fill out the form below to raise a ticket. Our support team will respond shortly.</p>
-            <form action="submit_ticket.php" method="POST">
+            <form id="ticketForm" method="POST">
                 <div class="form-group">
                     <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -55,11 +55,23 @@
         </div>
     </section>
 
+    <!-- Submitted Tickets Section -->
+    <section class="submitted-tickets-section">
+        <div class="container">
+            <h2>Submitted Tickets</h2>
+            <div id="ticketList">
+                <!-- Submitted tickets will appear here -->
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2024 ApexCoders</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

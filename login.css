@@ -1,64 +1,66 @@
-/* Login Form Section */
-.form-section {
+/* Login Page Styles */
+.login-section {
     padding: 50px 0;
-    background-color: #f9f9f9;
-}
-
-.form-section h2 {
+    background-color: #f4f4f4;
     text-align: center;
-    margin-bottom: 20px;
 }
 
-.form-section p {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-form {
+.login-section .container {
     max-width: 400px;
     margin: 0 auto;
-    background: white;
     padding: 20px;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.form-group {
+.login-section h2 {
     margin-bottom: 20px;
 }
 
-.form-group label {
-    display: block;
+.login-section .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.login-section label {
     font-weight: bold;
+    display: block;
     margin-bottom: 5px;
 }
 
-.form-group input {
+.login-section input {
     width: 100%;
     padding: 10px;
+    margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
 }
 
-form .btn {
-    display: block;
+.login-section button {
     width: 100%;
     padding: 10px;
     background-color: #0078d4;
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
     cursor: pointer;
 }
 
-form .btn:hover {
+.login-section button:hover {
     background-color: #005bb5;
 }
 
-form .error {
-    color: red;
-    text-align: center;
-    margin-bottom: 15px;
+.login-section .links {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login-section .links a {
+    color: #0078d4;
+    text-decoration: none;
+}
+
+.login-section .links a:hover {
+    text-decoration: underline;
 }
