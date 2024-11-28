@@ -68,7 +68,7 @@ h2 {
 /* ----------------- Slider Section ---------------- */
 .main-slider .carousel-slide::before {
     content: '';
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: black;
     position: absolute;
     height: 100%;
     width: 100%;
