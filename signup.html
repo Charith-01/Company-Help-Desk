@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raise a New Ticket</title>
-    <link rel="stylesheet" href="new_ticket.css">
+    <title>Signup - IT Support Desk</title>
+    <link rel="stylesheet" href="signup.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="header.css">
 </head>
@@ -24,45 +24,35 @@
                     <li><a href="#contact" class="btn">Contact Support</a></li>
                 </ul>
             </nav>
-            <div class="login-container">
-                <a href="login.html" class="btn secondary">Login</a>
-            </div>
         </div>
     </header>
 
-    <!-- Ticket Form Section -->
-    <section class="form-section">
+    <!-- Signup Form Section -->
+    <section class="signup-section">
         <div class="container">
-            <h2>Raise a New Ticket</h2>
-            <p>Please fill out the form below to raise a ticket. Our support team will respond shortly.</p>
-            <form id="ticketForm" method="POST">
+            <h2>Create Your Account</h2>
+            <p>Fill in the details below to register for the IT Support Desk.</p>
+            <form action="signup_process.php" method="POST" id="signup-form">
                 <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full_name" placeholder="Enter your full name" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Your Email</label>
+                    <label for="email">Email Address</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 </div>
                 <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
                 </div>
                 <div class="form-group">
-                    <label for="description">Description</label>
-                    <textarea id="description" name="description" rows="5" placeholder="Describe your issue..." required></textarea>
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm your password" required>
                 </div>
-                <button type="submit" class="btn">Submit Ticket</button>
+                <button type="submit" class="btn">Signup</button>
             </form>
-        </div>
-    </section>
-
-    <!-- Submitted Tickets Section -->
-    <section class="submitted-tickets-section">
-        <div class="container">
-            <h2>Submitted Tickets</h2>
-            <div id="ticketList">
-                <!-- Submitted tickets will appear here -->
+            <div class="links">
+                <p>Already have an account? <a href="login.html">Login here</a></p>
             </div>
         </div>
     </section>
@@ -74,6 +64,5 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
