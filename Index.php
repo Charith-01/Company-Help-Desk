@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT Help Desk</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
     <!-- Header -->
@@ -24,7 +22,7 @@
                 </ul>
             </nav>
             <div class="login-container">
-                <a href="login.html" class="btn secondary">Login</a>
+                <a href="login.php" class="btn secondary">Login</a>
             </div>
         </div>
     </header>
@@ -68,7 +66,7 @@
                 <div class="card">
                     <h3>Technical Support</h3>
                     <p>Get help with technical issues on this platforms.</p>
-                    <a href="new_ticket.html">Get touch for help</a>
+                    <a href="new_ticket.php">Get touch for help</a>
                 </div>
             </div>
         </div>

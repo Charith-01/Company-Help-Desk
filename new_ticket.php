@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raise a New Ticket</title>
-    <link rel="stylesheet" href="new_ticket.css">
+    <link rel="stylesheet" href="CSS/new_ticket.css">
 </head>
 <body>
     <!-- Header -->
@@ -16,7 +16,7 @@
             </div>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="#knowledgebase">Knowledgebase</a></li>
                     <li><a href="#files">Files</a></li>
                     <li><a href="#contact" class="btn">Contact Support</a></li>
@@ -72,6 +72,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="JS/script.js"></script>
 </body>
 </html>
