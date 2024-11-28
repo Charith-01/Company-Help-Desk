@@ -182,3 +182,11 @@ form .btn:hover {
 .ticket p strong {
     color: #0078d4;
 }
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    background-color: #001a33;
+    color: white;
+}
