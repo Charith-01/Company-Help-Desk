@@ -4,6 +4,11 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-image: url('../Images/background.png'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .container {
@@ -71,19 +76,17 @@ a:hover {
     background-color: #005bb5;
 }
 
-
 /* Signup Page Styles */
 .signup-section {
     padding: 50px 0;
-    background-color: #f4f4f4;
     text-align: center;
 }
 
 .signup-section .container {
     max-width: 400px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
+    padding: 70px;
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

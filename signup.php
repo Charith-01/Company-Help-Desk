@@ -42,7 +42,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $conn->close();
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,51 +70,45 @@ $conn->close();
     </header>
 
     <main>
-            <style>
-                body {
-                  background-image: url('./Images/background.png');
-                    
-                }
-             </style>
+        <!-- Signup Form Section -->
+        <section class="signup-section">
+            <div class="container">
+                <h2>Create Your Account</h2>
+                <p>Fill in the details below to register for the IT Support Desk.</p>
 
-    <!-- Signup Form Section -->
-    <section class="signup-section">
-        <div class="container">
-            <h2>Create Your Account</h2>
-            <p>Fill in the details below to register for the IT Support Desk.</p>
+                <!-- Display error or success messages -->
+                <?php if ($error): ?>
+                    <p style="color: red;"><?php echo $error; ?></p>
+                <?php endif; ?>
+                <?php if ($success): ?>
+                    <p style="color: green;"><?php echo $success; ?></p>
+                <?php endif; ?>
 
-            <!-- Display error or success messages -->
-            <?php if ($error): ?>
-                <p style="color: red;"><?php echo $error; ?></p>
-            <?php endif; ?>
-            <?php if ($success): ?>
-                <p style="color: green;"><?php echo $success; ?></p>
-            <?php endif; ?>
-
-            <form action="" method="POST" id="signup-form">
-                <div class="form-group">
-                    <label for="full-name">Full Name</label>
-                    <input type="text" id="full-name" name="full_name" placeholder="Enter your full name" required>
+                <form action="" method="POST" id="signup-form">
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full_name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="c_password" placeholder="Confirm your password" required>
+                    </div>
+                    <button type="submit" class="btn">Signup</button>
+                </form>
+                <div class="links">
+                    <p>Already have an account? <a href="login.php">Login here</a></p>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                </div>
-                <div class="form-group">
-                    <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password" name="c_password" placeholder="Confirm your password" required>
-                </div>
-                <button type="submit" class="btn">Signup</button>
-            </form>
-            <div class="links">
-                <p>Already have an account? <a href="login.php">Login here</a></p>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -123,7 +116,5 @@ $conn->close();
             <p>&copy; 2024 ApexCoders</p>
         </div>
     </footer>
-
-    </main>
 </body>
 </html>

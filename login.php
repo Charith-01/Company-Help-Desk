@@ -28,9 +28,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 session_start();
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['full_name'] = $user['full_name'];
-                header("Location: index.php");
+                $_SESSION['email'] = $user['email']; // Store email if needed for profile
+                header("Location: profile.php"); // Redirect to the profile page
                 exit;
-            } else {
+            }
+            else {
                 $error = 'Incorrect password.';
             }
         } else {
@@ -52,7 +54,6 @@ $conn->close();
     <link rel="stylesheet" href="CSS/login.css">
 </head>
 <body>
-    
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -62,7 +63,7 @@ $conn->close();
             </div>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="#knowledgebase">Knowledgebase</a></li>
                     <li><a href="#files">Files</a></li>
                     <li><a href="#contact" class="btn">Contact Support</a></li>
@@ -109,6 +110,5 @@ $conn->close();
             <p>&copy; 2024 ApexCoders</p>
         </div>
     </footer>    
-
 </body>
 </html>
