@@ -31,7 +31,7 @@ if (!isset($_SESSION['user_id'])) {
             </form>
         </div>
     </section>
-
+    
     <!-- Raise a New Ticket Section -->
     <section id="raise-ticket" class="ticket">
         <div class="container">
