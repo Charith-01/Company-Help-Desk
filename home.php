@@ -1,9 +1,15 @@
 
 <?php
-include_once 'header.php';
+include_once 'log_header.php';
 
 ?>
 
+<?php
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit;
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">

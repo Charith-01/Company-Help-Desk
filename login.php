@@ -1,4 +1,9 @@
 <?php
+include_once 'header.php';
+
+?>
+
+<?php
 require 'includes/config.php'; // Include your database configuration file
 
 // Initialize variables for error and success messages
@@ -54,23 +59,7 @@ $conn->close();
     <link rel="stylesheet" href="CSS/login.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <img src="Images/logo.png" alt="Logo">
-                <h1>IT Support Desk</h1>
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="#knowledgebase">Knowledgebase</a></li>
-                    <li><a href="#files">Files</a></li>
-                    <li><a href="#contact" class="btn">Contact Support</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    
     
     <!-- Login Form Section -->
     <section class="login-section">
@@ -104,11 +93,9 @@ $conn->close();
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 ApexCoders</p>
-        </div>
-    </footer>    
+    <?php
+             include_once 'footer.php';
+
+    ?>   
 </body>
 </html>

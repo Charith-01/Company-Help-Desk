@@ -1,0 +1,125 @@
+/* Styling for the header and navbar */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 10px 20px;
+    background-color: #00274d;
+    color: white;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.header ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header ul li {
+    margin-left: 20px;
+}
+
+/* Container for login buttons (My Tickets & Logout) */
+.login-container {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the buttons */
+}
+
+/* Styling for 'My Tickets' and 'Logout' buttons */
+.login-container a.btn.secondary {
+    background-color: #f4f4f4;
+    color: #00274d;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-weight: bold;
+}
+
+.login-container a.btn.secondary:hover {
+    background-color: #e0e0e0;
+}
+
+/* Additional styles for logout button */
+.btn-logout {
+    background-color: #e74c3c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-logout:hover {
+    background-color: #c0392b;
+}
+
+/* Nav links styling */
+.nav-links1 {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links1 li {
+    font-size: 18px;
+}
+
+.nav-links1 a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links1 a:hover {
+    color: #f39c12;
+}
+
+/* Base button styles */
+.nav-links .btn {
+    background-color: #0078d4;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.nav-links .btn:hover {
+    background-color: #005bb5;
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Active button (clicked state) */
+.nav-links .btn.active {
+    background-color: #00aaff; /* Light Blue color */
+}
+
+/* Transition and transform effects for links */
+.nav-links a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+    color: #0078d4;
+    transform: scale(1.1);
+}

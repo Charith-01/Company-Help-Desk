@@ -1,6 +1,7 @@
 <?php
 session_start(); // Start the session
 
+
 // Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php"); // Redirect to login if not logged in
@@ -30,7 +31,7 @@ $email = $_SESSION['email'];
             </div>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="index.php">Home</a></li>
+                    <li><a href="home.php">Home</a></li>
                     <li><a href="logout.php" class="btn-logout">Logout</a></li>
                 </ul>
             </nav>
@@ -52,11 +53,9 @@ $email = $_SESSION['email'];
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <p>&copy; 2024 ApexCoders</p>
-        </div>
-    </footer>
+    <?php
+             include_once 'footer.php';
+
+    ?>
 </body>
 </html>

@@ -18,64 +18,6 @@ body {
     margin: 0 auto;
 }
 
-header, footer {
-    background-color: #00274d;
-    color: white;
-    padding: 10px 0;
-}
-
-a {
-    text-decoration: none;
-    color: #0078d4;
-}
-
-a:hover {
-    color: #005bb5;
-}
-
-/* Header */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-
-.header .logo {
-    display: flex;
-    align-items: center;
-}
-
-.header .logo img {
-    width: 50px;
-    margin-right: 10px;
-}
-
-.header ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.header ul li {
-    margin-left: 20px;
-}
-
-.header ul li a {
-    color: white;
-    font-weight: bold;
-}
-
-.header ul li a.btn {
-    background-color: #0078d4;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-.header ul li a.btn:hover {
-    background-color: #005bb5;
-}
 
 /* Login Page Styles */
 .login-section {

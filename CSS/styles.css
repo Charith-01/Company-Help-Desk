@@ -4,7 +4,14 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-image: url('../Images/background.png'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
 }
+
 
 .container {
     width: 90%;
@@ -12,85 +19,9 @@ body {
     margin: 0 auto;
 }
 
-header, footer {
-    background-color: #00274d;
-    color: white;
-    padding: 10px 0;
-}
 
-a {
-    text-decoration: none;
-    color: #0078d4;
-}
 
-a:hover {
-    color: #005bb5;
-}
 
-/* Header */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-
-.header .logo {
-    display: flex;
-    align-items: center;
-}
-
-.header .logo img {
-    width: 50px;
-    margin-right: 10px;
-}
-
-.header ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.header ul li {
-    margin-left: 20px;
-}
-
-.header ul li a {
-    color: white;
-    font-weight: bold;
-}
-
-.header ul li a.btn {
-    background-color: #0078d4;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-.header ul li a.btn:hover {
-    background-color: #005bb5;
-}
-
-/* Login Button */
-.login-container {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.login-container a.btn.secondary {
-    background-color: #f4f4f4;
-    color: #00274d;
-    padding: 5px 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-weight: bold;
-}
-
-.login-container a.btn.secondary:hover {
-    background-color: #e0e0e0;
-}
 
 /* Hero Section */
 .hero {
@@ -142,7 +73,6 @@ a:hover {
     width: 100%;
 }
 
-
 /* Cards Section */
 .section {
     padding: 50px 0;
@@ -181,11 +111,31 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Footer */
-footer {
+/* Contact Section */
+.contact {
+    padding: 50px 0;
     text-align: center;
-    padding: 20px 0;
-    font-size: 14px;
-    background-color: #001a33;
+    background-color: #f4f4f4;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact .btn {
+    background-color: #0078d4;
+    padding: 10px 20px;
+    border-radius: 5px;
     color: white;
 }
+
+.contact .btn:hover {
+    background-color: #005bb5;
+}
+
+.login-container .btn {
+    margin-right: 10px;
+}
+
+
+

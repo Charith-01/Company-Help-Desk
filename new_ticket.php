@@ -1,3 +1,8 @@
+<?php
+include_once 'log_header.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,70 +12,31 @@
     <link rel="stylesheet" href="CSS/new_ticket.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <img src="Images/logo.png" alt="Logo">
-                <h1>IT Support Desk</h1>
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="#knowledgebase">Knowledgebase</a></li>
-                    <li><a href="#files">Files</a></li>
-                    <li><a href="#contact" class="btn">Contact Support</a></li>
-                </ul>
-            </nav>
-            <div class="login-container">
-                <a href="login.html" class="btn secondary">Login</a>
-            </div>
-        </div>
-    </header>
+   
 
     <!-- Ticket Form Section -->
     <section class="form-section">
         <div class="container">
             <h2>Raise a New Ticket</h2>
             <p>Please fill out the form below to raise a ticket. Our support team will respond shortly.</p>
-            <form id="ticketForm" method="POST">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
-                </div>
-                <div class="form-group">
-                    <label for="description">Description</label>
-                    <textarea id="description" name="description" rows="5" placeholder="Describe your issue..." required></textarea>
-                </div>
-                <button type="submit" class="btn">Submit Ticket</button>
+            <form action="submit_ticket.php" method="POST" class="ticket-form">
+                <label for="title">Issue Title:</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="description">Issue Description:</label>
+                <textarea id="description" name="description" required></textarea>
+
+                <button type="submit">Submit Ticket</button>
             </form>
         </div>
     </section>
 
-    <!-- Submitted Tickets Section -->
-    <section class="submitted-tickets-section">
-        <div class="container">
-            <h2>Submitted Tickets</h2>
-            <div id="ticketList">
-                <!-- Submitted tickets will appear here -->
-            </div>
-        </div>
-    </section>
+    
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 ApexCoders</p>
-        </div>
-    </footer>
+    <?php
+             include_once 'footer.php';
+
+    ?>
 
     <script src="JS/script.js"></script>
 </body>
