@@ -77,7 +77,6 @@ $conn->close();
                     <label for="">Password</label>
                 </div>
                 <div class="forget">
-                <label><input type="checkbox"> Remember me</label>
                 <label><a href="#">Forgot password?</a></label>
                 </div>
                 <button>Log in</button>
