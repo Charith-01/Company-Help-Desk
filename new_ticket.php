@@ -13,6 +13,19 @@ include_once 'log_header.php';
 </head>
 <body>
    
+    <div class="breadcrumb-container">
+        <nav class="breadcrumb">
+            <a href="./home.php" class="breadcrumb-logo">
+                <img src="./Images/logo.png" alt="Help Desk Logo" class="logo">
+            </a>
+            <a href="./home.php" class="breadcrumb-link">Help Center</a>
+            <span class="breadcrumb-separator">></span>
+            <a href="./knowledgebase.php" class="breadcrumb-link active">Raise Ticket</a>
+        </nav>
+    </div>
+
+
+   
 
     <!-- Ticket Form Section -->
     <section class="form-section">

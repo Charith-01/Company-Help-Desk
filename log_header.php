@@ -23,14 +23,14 @@ if (!isset($_SESSION['user_id'])) {
                 <img src="Images/logo.png" alt="Logo">
                 <h1><a href="./home.php">IT Support Desk</a></h1>    
             </div>
-            <nav>
+            <!-- <nav>
                 <ul class="nav-links">
                     <li><a href="home.php" class="btn">Home</a></li>
                     <li><a href="home.php" class="btn">Knowledgebase</a></li>
                     <li><a href="home.php" class="btn">Raise a Ticket</a></li>
                     <li><a href="home.php" class="btn">Contact Support</a></li>
                 </ul>
-            </nav>
+            </nav> -->
             
             <!-- My Tickets and Logout buttons -->
             <div class="login-container">

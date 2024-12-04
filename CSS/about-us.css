@@ -1,0 +1,100 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+    background-image: url('../Images/background.png'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    
+}
+
+.container-wrapper {
+    display: flex; /* Enable flexbox for this specific container */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure it takes the full viewport height */
+}
+
+.container1 {
+    flex: 1;
+    min-width: 600px;
+    max-width: 800px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+
+
+
+/* About Section */
+.about-section,
+.mission-section,
+.values-section,
+.contact-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.about-section h2,
+.mission-section h2,
+.values-section h2,
+.contact-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.about-section p,
+.mission-section p,
+.values-section p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.values-section ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.values-section li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.values-section strong {
+    color: #007bff;
+}
+
+/* Contact Section */
+.contact-section p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 14px;
+}

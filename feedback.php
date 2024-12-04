@@ -16,6 +16,18 @@ include_once 'log_header.php';
     <link rel="stylesheet" href="CSS/feedback.css">
 </head>
 <body>
+
+    <div class="breadcrumb-container">
+        <nav class="breadcrumb">
+            <a href="./home.php" class="breadcrumb-logo">
+                <img src="./Images/logo.png" alt="Help Desk Logo" class="logo">
+            </a>
+            <a href="./home.php" class="breadcrumb-link">Help Center</a>
+            <span class="breadcrumb-separator">></span>
+            <a href="#" class="breadcrumb-link active">Feedback</a>
+        </nav>
+    </div>
+
         <div class="container1">
             <h1>IT Help Desk Feedback</h1>
         </div>
