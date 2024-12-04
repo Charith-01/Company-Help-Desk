@@ -1,0 +1,85 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('../Images/background.png'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Signup Page Styles */
+.signup-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.signup-section .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 70px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup-section h2 {
+    margin-bottom: 20px;
+}
+
+.signup-section .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.signup-section label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.signup-section input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signup-section button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup-section button:hover {
+    background-color: #005bb5;
+}
+
+.signup-section .links {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.signup-section .links a {
+    color: #0078d4;
+    text-decoration: none;
+}
+
+.signup-section .links a:hover {
+    text-decoration: underline;
+}
+
