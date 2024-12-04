@@ -36,6 +36,17 @@ $result = $stmt->get_result();
     <script src="JS/view_tickets.js" defer></script>
 </head>
 <body>
+
+    <div class="breadcrumb-container">
+        <nav class="breadcrumb">
+            <a href="./home.php" class="breadcrumb-logo">
+                <img src="./Images/logo.png" alt="Help Desk Logo" class="logo">
+            </a>
+            <a href="./home.php" class="breadcrumb-link">Help Center</a>
+            <span class="breadcrumb-separator">></span>
+            <a href="#" class="breadcrumb-link active">My Tickets</a>
+        </nav>
+    </div>
     
 
 
@@ -78,5 +89,3 @@ $result = $stmt->get_result();
 $stmt->close();
 $conn->close();
 ?>
-
-

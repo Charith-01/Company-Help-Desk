@@ -14,7 +14,16 @@ include_once 'header.php';
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
+        <div class="breadcrumb-container">
+            <nav class="breadcrumb">
+                <a href="./home.php" class="breadcrumb-logo">
+                    <img src="./Images/logo.png" alt="Help Desk Logo" class="logo">
+                </a>
+                <a href="./home.php" class="breadcrumb-link active">Help Center</a>
+            </nav>
+        </div>
     
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -38,33 +47,24 @@ include_once 'header.php';
     <!-- Knowledgebase Section -->
     <section id="knowledgebase" class="section">
         <div class="container">
-            <h2>Knowledgebase</h2>
+            <h2>fg</h2>
             <div class="cards">
                 <div class="card">
-                    <h3>General FAQs</h3>
+                    <h3>Knowledgebase</h3>
                     <p>Find answers to frequently asked questions related to IT support and services.</p>
-                    <a href="general.php">View Articles</a>
+                    <a href="knowledgebase.php">View Articles</a>
                 </div>
                 <div class="card">
-                    <h3>Software Help</h3>
+                    <h3>Files</h3>
                     <p>Explore troubleshooting guides and FAQs for the software tools provided by IT.</p>
                     <a href="software.php">View Articles</a>
                 </div>
                 <div class="card">
-                    <h3>Hardware Support</h3>
+                    <h3>Contact Support</h3>
                     <p>Get assistance with hardware-related issues such as device malfunctions and configurations.</p>
-                    <a href="hardware.php">View Articles</a>
+                    <a href="new_ticket.php">View Articles</a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Support Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact IT Support</h2>
-            <p>If you cannot find the solution to your problem, reach out to our support team directly.</p><br>
-            <a href="contact.php" class="btn">Contact Support</a>
         </div>
     </section>
 
