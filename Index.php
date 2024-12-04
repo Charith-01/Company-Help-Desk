@@ -20,10 +20,6 @@ include_once 'header.php';
                     <img src="./Images/logo.png" alt="Help Desk Logo" class="logo">
                 </a>
                 <a href="./home.php" class="breadcrumb-link active">Help Center</a>
-                <span class="breadcrumb-separator">></span>
-                <a href="./knowledgebase.php" class="breadcrumb-link">Knowledgebase</a>
-                <span class="breadcrumb-separator">></span>
-                <a href="./about-us.php" class="breadcrumb-link">About Us</a>
             </nav>
         </div>
     

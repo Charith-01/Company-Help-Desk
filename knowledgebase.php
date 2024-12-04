@@ -27,8 +27,6 @@ if (!isset($_SESSION['user_id'])) {
             <a href="./home.php" class="breadcrumb-link">Help Center</a>
             <span class="breadcrumb-separator">></span>
             <a href="./knowledgebase.php" class="breadcrumb-link active">Knowledgebase</a>
-            <span class="breadcrumb-separator">></span>
-            <a href="./about-us.php" class="breadcrumb-link">About Us</a>
         </nav>
     </div>
 

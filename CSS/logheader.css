@@ -5,7 +5,7 @@
     align-items: center;
     position: relative;
     padding: 10px 20px;
-    background-color: #00274d;
+    background-color: #ffffff;
     color: white;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .header .logo h1 a {
-    color: white; /* Keep the text color consistent */
+    color: #0078d4; /* Keep the text color consistent */
     text-decoration: none; /* Remove underline */
     font-size: 28px; /* Adjust size for emphasis */
     font-weight: bold; /* Make it stand out */
@@ -161,7 +161,7 @@
 
 /* Transition and transform effects for links */
 .nav-links a {
-    color: rgb(230, 229, 229);
+    color: white;
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;

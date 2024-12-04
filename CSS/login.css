@@ -85,11 +85,3 @@ body {
     text-decoration: underline;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    font-size: 14px;
-    background-color: rgba(0, 26, 51, 0.9);
-    color: white;
-}
