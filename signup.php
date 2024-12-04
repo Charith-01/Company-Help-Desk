@@ -56,8 +56,6 @@ $conn->close();
 </head>
 <body>
     
-
-    <main>
         <!-- Signup Form Section -->
         <section class="signup-section">
             <div class="container">
@@ -96,7 +94,6 @@ $conn->close();
                 </div>
             </div>
         </section>
-    </main>
 
     <!-- Footer -->
     <?php
