@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Insert the user into the database
             $insertQuery = "INSERT INTO users (full_name, email, password) VALUES ('$fullName', '$email', '$hashedPassword')";
             if ($conn->query($insertQuery) === TRUE) {
-                $success = 'Registration successful! You can now <a href="login.php">log in</a>.';
+                $success = 'Registration successful!';
             } else {
                 $error = 'Database error: ' . $conn->error;
             }
