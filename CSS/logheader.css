@@ -4,9 +4,10 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    padding: 10px 20px;
-    background-color: #00274d;
+    padding: 2px 10px;
+    background-color: #fff;
     color: white;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
 }
 
 .header .logo {
@@ -15,18 +16,13 @@
 }
 
 .header .logo h1 a {
-    color: white; /* Keep the text color consistent */
+    color: #0078d4; /* Keep the text color consistent */
     text-decoration: none; /* Remove underline */
     font-size: 28px; /* Adjust size for emphasis */
     font-weight: bold; /* Make it stand out */
     display: inline-block; /* Ensure it behaves as a block for styling */
     transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
 }
-
-.header .logo h1 a:hover {
-    color: #504f4c; /* Optional hover color to indicate interactivity */
-}
-
 
 .header .logo img {
     width: 100px;

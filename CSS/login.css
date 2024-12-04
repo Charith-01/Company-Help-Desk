@@ -48,17 +48,17 @@
     top: 50%;
     left: 5px;
     transform: translateY(-50%);
-    color: #CACACA;
+    color: #5a5959;
     font-size: 1em;
     pointer-events: none;
     transition: 0.5s;
   }
   
-  input:focus ~ label {
-    top: -5px;
-  }
-  input:valid ~ label {
-    top: -5px;
+  .inputbox input:focus ~ label,
+  .inputbox input:valid ~ label {
+      top: -5px;
+      font-size: 1em;
+      color: black;
   }
   
   .inputbox input {
@@ -69,13 +69,13 @@
     outline: none;
     font-size: 1em;
     padding: 0 35px 0 5px;
-    color: #CACACA;
+    color: #5a5959;
   }
   
   .inputbox ion-icon {
     position: absolute;
     right: 8px;
-    color: #CACACA;
+    color: #5a5959;
     font-size: 1.2em;
     top: 20px;
   }
@@ -124,7 +124,7 @@
   }
   
   .register {
-    font-size: 0.9em;
+    font-size: 1em;
     font-weight: 400;
     color: black;
     text-align: center;

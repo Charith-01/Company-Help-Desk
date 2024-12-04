@@ -55,50 +55,46 @@ $conn->close();
     <link rel="stylesheet" href="CSS/signup.css">
 </head>
 <body>
-    
-        <!-- Signup Form Section -->
-        <section class="signup-section">
-            <div class="container">
-                <h2>Create Your Account</h2>
-                <p>Fill in the details below to register for the IT Support Desk.</p>
+    <section>
+        <div class="form-box">
+            <h2>Create Your Account</h2>
 
-                <!-- Display error or success messages -->
-                <?php if ($error): ?>
-                    <p style="color: red;"><?php echo $error; ?></p>
-                <?php endif; ?>
-                <?php if ($success): ?>
-                    <p style="color: green;"><?php echo $success; ?></p>
-                <?php endif; ?>
+            <!-- Display error or success messages -->
+            <?php if ($error): ?>
+                <p style="color: red;"><?php echo $error; ?></p>
+            <?php endif; ?>
+            <?php if ($success): ?>
+                <p style="color: green;"><?php echo $success; ?></p>
+            <?php endif; ?>
 
-                <form action="" method="POST" id="signup-form">
-                    <div class="form-group">
-                        <label for="full-name">Full Name</label>
-                        <input type="text" id="full-name" name="full_name" placeholder="Enter your full name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="confirm-password">Confirm Password</label>
-                        <input type="password" id="confirm-password" name="c_password" placeholder="Confirm your password" required>
-                    </div>
-                    <button type="submit" class="btn">Signup</button>
-                </form>
-                <div class="links">
-                    <p>Already have an account? <a href="login.php">Login here</a></p>
+            <form action="" method="POST" id="signup-form">
+                <div class="inputbox">
+                    <input type="text" id="full-name" name="full_name" required>
+                    <label for="full-name">Full Name</label>
                 </div>
+                <div class="inputbox">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Email Address</label>
+                </div>
+                <div class="inputbox">
+                    <input type="password" id="password" name="password" required>
+                    <label for="password">Password</label>
+                </div>
+                <div class="inputbox">
+                    <input type="password" id="confirm-password" name="c_password" required>
+                    <label for="confirm-password">Confirm Password</label>
+                </div>
+                <button type="submit">Signup</button>
+            </form>
+            <div class="login">
+                <p>Already have an account? <a href="login.php">Login here</a></p>
             </div>
-        </section>
+        </div>
+    </section>
 
     <!-- Footer -->
     <?php
-             include_once 'footer.php';
-
+    include_once 'footer.php';
     ?>
 </body>
 </html>
