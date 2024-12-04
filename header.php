@@ -13,18 +13,12 @@
         <div class="container">
             <div class="logo">
                 <img src="Images/logo.png" alt="Logo">
-                <h1>IT Support Desk</h1>
+                <h1><a href="./index.php">IT Support Desk</a></h1>                
             </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#knowledgebase">Knowledgebase</a></li>
-                    <li><a href="#raise-ticket">Raise a Ticket</a></li>
-                    <li><a href="#contact" class="btn">Contact Support</a></li>
-                </ul>
-            </nav>
+            
             <div class="login-container">
-                <a href="./login.php"><li>Login</li></a>
-                <a href="./signUp.php"><li>Sign up</li></a>
+                <a href="./login.php" class="btn secondary1">Login</a>
+                <a href="./signUp.php" class="btn secondary1">Sign up</a>
             </div>
         </div>
     </header>

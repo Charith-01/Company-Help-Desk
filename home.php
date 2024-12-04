@@ -69,10 +69,20 @@ if (!isset($_SESSION['user_id'])) {
     <section id="contact" class="contact">
         <div class="container">
             <h2>Contact IT Support</h2>
-            <p>If you cannot find the solution to your problem, reach out to our support team directly.</p>
+            <p>If you cannot find the solution to your problem, reach out to our support team directly.</p><br>
             <a href="contact.php" class="btn">Contact Support</a>
         </div>
     </section>
+
+        <!-- Feedback Section -->
+    <section id="feedback" class="section">
+        <div class="container">
+            <h2>We Value Your Feedback</h2>
+            <p>Your opinions help us improve. Share your feedback with us!</p><br>
+            <a href="feedback.php" class="btn">Give Feedback</a>
+        </div>
+    </section>
+
 
     <?php
              include_once 'footer.php';

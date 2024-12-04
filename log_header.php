@@ -21,14 +21,14 @@ if (!isset($_SESSION['user_id'])) {
         <div class="container">
             <div class="logo">
                 <img src="Images/logo.png" alt="Logo">
-                <h1>IT Support Desk</h1>
+                <h1><a href="./home.php">IT Support Desk</a></h1>    
             </div>
             <nav>
                 <ul class="nav-links">
                     <li><a href="home.php" class="btn">Home</a></li>
-                    <li><a href="#knowledgebase" class="btn">Knowledgebase</a></li>
-                    <li><a href="#raise-ticket" class="btn">Raise a Ticket</a></li>
-                    <li><a href="#contact" class="btn">Contact Support</a></li>
+                    <li><a href="home.php" class="btn">Knowledgebase</a></li>
+                    <li><a href="home.php" class="btn">Raise a Ticket</a></li>
+                    <li><a href="home.php" class="btn">Contact Support</a></li>
                 </ul>
             </nav>
             
