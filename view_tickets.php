@@ -78,5 +78,3 @@ $result = $stmt->get_result();
 $stmt->close();
 $conn->close();
 ?>
-
-

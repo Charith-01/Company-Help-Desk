@@ -38,20 +38,20 @@ include_once 'header.php';
     <!-- Knowledgebase Section -->
     <section id="knowledgebase" class="section">
         <div class="container">
-            <h2>Knowledgebase</h2>
+            <h2>fg</h2>
             <div class="cards">
                 <div class="card">
-                    <h3>General FAQs</h3>
+                    <h3>Knowledgebase</h3>
                     <p>Find answers to frequently asked questions related to IT support and services.</p>
-                    <a href="general.php">View Articles</a>
+                    <a href="knowledgebase.php">View Articles</a>
                 </div>
                 <div class="card">
-                    <h3>Software Help</h3>
+                    <h3>Files</h3>
                     <p>Explore troubleshooting guides and FAQs for the software tools provided by IT.</p>
                     <a href="software.php">View Articles</a>
                 </div>
                 <div class="card">
-                    <h3>Hardware Support</h3>
+                    <h3>Contact Support</h3>
                     <p>Get assistance with hardware-related issues such as device malfunctions and configurations.</p>
                     <a href="hardware.php">View Articles</a>
                 </div>

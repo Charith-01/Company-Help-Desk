@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f9 url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+  }
+  
+  .knowledgebase {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .knowledgebase h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  .knowledgebase .icon {
+    font-size: 1.5rem;
+    color: #0073e6;
+  }
+  
+  .categories {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .category {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: left;
+  }
+  
+  .category h2 {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .category ul li {
+    margin: 5px 0;
+  }
+  
+  .category ul li a {
+    text-decoration: none;
+    color: #0073e6;
+  }
+  
+  .category ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .view-all {
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+    color: #0073e6;
+    font-size: 0.9rem;
+  }
+  
+  .view-all:hover {
+    text-decoration: underline;
+  }
+  

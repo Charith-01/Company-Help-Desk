@@ -17,7 +17,7 @@ if (!isset($_SESSION['user_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>General FAQs | IT Help Desk</title>
-    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/knowledgebase.css">
 </head>
 <body>
   
@@ -39,6 +39,33 @@ if (!isset($_SESSION['user_id'])) {
             </div>
         </div>
     </section>
+
+    <div class="knowledgebase">
+        <h1><span class="icon">💡</span> Knowledgebase</h1>
+        <div class="categories">
+            <div class="category">
+                <div class="icon-folder"></div>
+                <h2>General (36)</h2>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">What is Help Desk</a></li>
+                    <li><a href="#">Semester Registration</a></li>
+                    <li><a href="#">What is Eduscope?</a></li>
+                    <li><a href="#">Rules and Regulations for users</a></li>
+                </ul>
+               
+            </div>
+            <div class="category">
+                <div class="icon-folder"></div>
+                <h2>Verification (1)</h2>
+                <ul>
+                    <li><a href="#">Credit Conversions to European Credit Transfer...</a></li>
+                </ul>
+           
+            </div>
+        </div>
+  </div>
+  <script src="script.js"></script>
 
     <?php
              include_once 'footer.php';
