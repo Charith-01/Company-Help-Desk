@@ -12,8 +12,8 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <img src="Images/logo.png" alt="Logo">
-                <h1><a href="./index.php">IT Support Desk</a></h1>                
+                <a href="./index.php"><img src="Images/logo.png" alt="Logo"></a>
+                <h1><a href="./index.php">Hellodesk.</a></h1>       
             </div>
             
             <div class="login-container">

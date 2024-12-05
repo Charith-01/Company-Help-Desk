@@ -1,87 +1,142 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: url('../Images/background.png'); /* Path to your background image */
-    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+  
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: url("../images/background.jpg") no-repeat;
     background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #333;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-
-/* Login Page Styles */
-.login-section {
-    padding: 50px;
+    background-size: cover;
+  }
+  
+  .form-box {
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h2 {
+    font-size: 2em;
+    color: black;
     text-align: center;
-}
-
-.login-section .container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 70px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.login-section h2 {
-    margin-bottom: 20px;
-}
-
-.login-section .form-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.login-section label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.login-section input {
+  }
+  
+  .inputbox {
+    position: relative;
+    margin: 25px 0;
+    width: 310px;
+    border-bottom: 2px solid #5a5959;
+  }
+  
+  .inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+  
+  .inputbox input:focus ~ label,
+  .inputbox input:valid ~ label {
+      top: -5px;
+      font-size: 1em;
+      color: #5a5959;
+  }
+  
+  .inputbox input {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.login-section button {
-    width: 100%;
-    padding: 10px;
-    background-color: #0078d4;
-    color: white;
+    height: 50px;
+    background: transparent;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.login-section button:hover {
-    background-color: #005bb5;
-}
-
-.login-section .links {
-    margin-top: 20px;
-    font-size: 14px;
-}
-
-.login-section .links a {
-    color: #0078d4;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: black;
+  }
+  
+  .inputbox ion-icon {
+    position: absolute;
+    right: 8px;
+    color: #5a5959;
+    font-size: 1.2em;
+    top: 20px;
+  }
+  
+  .forget {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 15px;
+    font-size: 0.9em;
+    color: #fff;
+  }
+  
+  .forget label:nth-child(2) {
+    order: 1;
+  }
+  
+  .forget label {
+    display: flex;
+    align-items: center;
+  }
+  
+  .forget label input[type="checkbox"] {
+    margin-right: 6px;
+  }
+  
+  .forget label a {
+    color: #0171d3;
     text-decoration: none;
-}
-
-.login-section .links a:hover {
+  }
+  
+  .forget label a:hover {
     text-decoration: underline;
-}
-
+  }
+  
+  button {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background: #0171d3;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 400;
+  }
+  
+  .register {
+    font-size: 1em;
+    font-weight: 400;
+    color: black;
+    text-align: center;
+    margin: 25px 0 10px;
+  }
+  
+  .register p a {
+    text-decoration: none;
+    color: #0171d3;
+    font-weight: 600;
+  }
+  
+  .register p a:hover {
+    text-decoration: underline;
+  }

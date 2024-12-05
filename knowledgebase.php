@@ -40,7 +40,7 @@ if (!isset($_SESSION['user_id'])) {
                 <div class="icon-folder"></div>
                 <h2>General </h2>
                 <ul>
-                    <li><a href="/about-us.php">About Us</a></li>
+                    <li><a href="./about-us.php">About Us</a></li>
                     <li><a href="#">What is Help Desk</a></li>                    
                     <li><a href="#">How to Raise a Ticket?</a></li>
                     <li><a href="#">How Can I Reset My Password?</a></li>
