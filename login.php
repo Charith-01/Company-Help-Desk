@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="form-box">
             <div class="form-value">
                 <form action="" method="POST">
-                    <h2>Login hhhhhhhhhhhhhhhhh</h2>
+                    <h2>Login AAAAA</h2>
                     
                     <!-- Display error or success messages -->
                     <?php if (!empty($error)): ?>
