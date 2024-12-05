@@ -60,38 +60,31 @@ $conn->close();
 </head>
 <body>
     
-    
     <!-- Login Form Section -->
-    <section class="login-section">
-        <div class="container">
-            <h2>Login to IT Support Desk</h2>
-            <p>Enter your credentials to access the support system.</p>
-
-            <!-- Display error or success messages -->
-            <?php if ($error): ?>
-                <p style="color: red;"><?php echo $error; ?></p>
-            <?php endif; ?>
-            <?php if ($success): ?>
-                <p style="color: green;"><?php echo $success; ?></p>
-            <?php endif; ?>
-
-            <form action="" method="POST" id="login-form">
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+<section>
+    <div class="form-box">
+        <div class="form-value">
+            <form action="">
+                <h2>Login</h2>
+                <div class="inputbox">
+                    <input type="email" required>
+                    <label for="">Email</label>
                 </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <div class="inputbox">
+                    <input type="password" required>
+                    <label for="">Password</label>
                 </div>
-                <button type="submit" class="btn">Login</button>
+                <div class="forget">
+                <label><a href="#">Forgot password?</a></label>
+                </div>
+                <button>Log in</button>
+                <div class="register">
+                <p>Don't have a account ? <a href="signup.php">Register</a></p>
+                </div>
             </form>
-            <div class="links">
-                <a href="forgot_password.html">Forgot Password?</a>
-                <p>Don't have an account? <a href="signup.php">Register here</a></p>
-            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <?php
              include_once 'footer.php';
