@@ -57,7 +57,7 @@ $conn->close();
 <body>
     <section>
         <div class="form-box">
-            <h2>Create Your Account</h2>
+            <h2>Create Your Account shani</h2>
 
             <!-- Display error or success messages -->
             <?php if ($error): ?>
