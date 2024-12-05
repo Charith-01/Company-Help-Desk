@@ -20,8 +20,8 @@ if (!isset($_SESSION['user_id'])) {
     <header class="header">
         <div class="container">
             <div class="logo">
-                <img src="Images/logo.png" alt="Logo">
-                <h1><a href="./home.php">IT Support Desk</a></h1>    
+                <a href="./home.php"><img src="Images/logo.png" alt="Logo"></a>
+                <h1><a href="./home.php">Hellodesk.</a></h1>    
             </div>
             <!-- <nav>
                 <ul class="nav-links">
