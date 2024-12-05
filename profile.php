@@ -1,5 +1,7 @@
 <?php
-session_start(); // Start the session
+include_once 'log_header.php';
+
+
 
 
 // Check if the user is logged in
@@ -22,22 +24,7 @@ $email = $_SESSION['email'];
     <link rel="stylesheet" href="CSS/profile.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <img src="Images/logo.png" alt="Logo" class="logo-img">
-                <h1>IT Support Desk</h1>
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="home.php">Home</a></li>
-                    <li><a href="logout.php" class="btn-logout">Logout</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
+    
     <!-- Profile Section -->
     <section class="profile-section">
         <div class="profile-container">
