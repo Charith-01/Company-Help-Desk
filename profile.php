@@ -24,6 +24,17 @@ $email = $_SESSION['email'];
     <link rel="stylesheet" href="CSS/profile.css">
 </head>
 <body>
+
+    <div class="breadcrumb-container">
+        <nav class="breadcrumb">
+            <a href="./home.php" class="breadcrumb-logo">
+                <img src="./Images/logo.png" alt="Help Desk Logo" class="logo">
+            </a>
+            <a href="./home.php" class="breadcrumb-link">Help Center</a>
+            <span class="breadcrumb-separator">></span>
+            <a href="./profile.php" class="breadcrumb-link active">Profile</a>
+        </nav>
+    </div>
     
     <!-- Profile Section -->
     <section class="profile-section">
