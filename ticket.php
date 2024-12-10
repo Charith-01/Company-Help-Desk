@@ -60,6 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <script src="../js/myscript.js"></script>
 </head>
 <body>
+    <section>
     <div class="ticket-form-container">
         <header>IT Service Ticket</header>
         <p>Please fill out the form below to raise a ticket. Our support team will respond shortly.</p>
@@ -110,6 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             
         </form>
     </div>
+    </section>
 </body>
 </html>
 
