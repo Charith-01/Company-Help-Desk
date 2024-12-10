@@ -6,17 +6,22 @@
   font-family: 'Arial', sans-serif;
 }
 
-/* Body */
-/* body {
-  background-color: #f4f4f4;
-  color: #00274d;
+body {
+  background-color: #f4f6f8;
+  color: #333;
   line-height: 1.6;
-} */
+  background-image: url('../Images/background.png'); /* Path to your background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  
+}
 
 
 /* Profile Section */
 .profile-section {
-  background-color: white;
   padding: 60px 20px;
 }
 
