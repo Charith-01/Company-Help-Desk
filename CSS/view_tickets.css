@@ -1,23 +1,24 @@
 /* Global styles */
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
     background-image: url('../Images/background.png'); /* Path to your background image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #333;
+
+    
 }
 
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
 
 
@@ -30,15 +31,6 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Header styles */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
 
 .new {
     display: flex;

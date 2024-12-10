@@ -1,16 +1,40 @@
 /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
 body {
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+    background-image: url('../Images/background.png'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;    
+}
+
+
+/* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+    background-image: url('../Images/background.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+} */
 
 
 /* Ticket Form Section */
 .form-section {
     padding: 50px 0;
-    background-color: #ffffff;
     margin-top: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -23,15 +47,8 @@ body {
 .form-section h2,
 .form-section p {
     margin-bottom: 20px;
-    color: #0a2941;
+    color: #c4c1c1;
 }
-
-.container {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
 
 
 /* Form Section */
