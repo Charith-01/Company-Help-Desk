@@ -47,7 +47,7 @@ include_once 'header.php';
     <!-- Knowledgebase Section -->
     <section id="knowledgebase" class="section">
         <div class="container">
-            <h2>fg</h2>
+            <h2>FirmGround</h2>
             <div class="cards">
                 <div class="card">
                     <h3>Knowledgebase</h3>
