@@ -1,10 +1,10 @@
 <?php
+session_start();
 include_once 'header.php';
-require 'includes/config.php'; // Include your database configuration file
+require 'includes/config.php'; // Database configuration
 
-// Initialize variables for error and success messages
+// Initialize error message
 $error = '';
-$success = '';
 
 // Handle form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $error = 'Invalid email address.';
     } else {
-        // Query to fetch the user with the given email using prepared statements
+        // Query to fetch the user
         $stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
         $stmt->bind_param("s", $email);
         $stmt->execute();
@@ -28,11 +28,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // Verify the password
             if (password_verify($password, $user['password'])) {
-                session_start();
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['full_name'] = $user['full_name'];
-                $_SESSION['email'] = $user['email']; // Store email if needed for profile
-                header("Location: profile.php"); // Redirect to the profile page
+                $_SESSION['email'] = $user['email']; 
+                $_SESSION['Acc_type'] = $user['Acc_type'];
+
+                // Correct redirect paths
+                if ($user['Acc_type'] === 'Admin') {
+                    header("Location: Dashboard/dashboard.php"); 
+                } else {
+                    header("Location: profile.php"); 
+                }
                 exit;
             } else {
                 $error = 'Incorrect password.';
@@ -45,6 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

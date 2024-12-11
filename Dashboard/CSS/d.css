@@ -1,0 +1,165 @@
+/* Global Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+    background-image: url('../Images/background.png'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    
+}
+
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Dashboard Sidebar Styles */
+
+.dashboard-sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    margin-right: 20px;
+}
+
+.sidebar-section {
+    margin-bottom: 20px;
+}
+
+.sidebar-section h2 {
+    margin-bottom: 10px;
+}
+
+.sidebar-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-section li {
+    margin-bottom: 10px;
+}
+
+.sidebar-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar-section a:hover {
+    color: #ccc;
+}
+
+/* Dashboard Main Styles */
+
+.dashboard-main {
+    width: calc(100% - 270px);
+    padding: 1em;
+}
+
+/* Ticket Table Styles */
+
+.ticket-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ticket-table th, .ticket-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.ticket-table th {
+    background-color: #f0f0f0;
+}
+
+.ticket-table td {
+    background-color: #fff;
+}
+
+.ticket-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Ticket Card Styles */
+
+.ticket-card {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-card h2 {
+    margin-top: 0;
+}
+
+.ticket-card p {
+    margin-bottom: 20px;
+}
+
+.ticket-card .ticket-status {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.ticket-card .ticket-status.open {
+    background-color: #4CAF50;
+}
+
+.ticket-card .ticket-status.closed {
+    background-color: #ccc;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .dashboard-sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .dashboard-main {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .dashboard-sidebar {
+        margin-right: 0;
+    }
+}

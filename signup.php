@@ -1,8 +1,5 @@
 <?php
 include_once 'header.php';
-
-?>
-<?php
 require 'includes/config.php';
 
 $error = '';
@@ -13,6 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $conn->real_escape_string(trim($_POST['email']));
     $password = trim($_POST['password']);
     $confirmPassword = trim($_POST['c_password']);
+    $role = $conn->real_escape_string($_POST["role"]);
+    $company_id = $conn->real_escape_string($_POST["company_id"]);
 
     // Validate input
     if (empty($fullName) || empty($email) || empty($password) || empty($confirmPassword)) {
@@ -26,19 +25,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
 
         // Check if the email already exists
-        $emailCheckQuery = "SELECT * FROM users WHERE email = '$email'";
-        $result = $conn->query($emailCheckQuery);
-
-        if ($result->num_rows > 0) {
-            $error = 'Email is already registered.';
-        } else {
-            // Insert the user into the database
-            $insertQuery = "INSERT INTO users (full_name, email, password) VALUES ('$fullName', '$email', '$hashedPassword')";
-            if ($conn->query($insertQuery) === TRUE) {
-                $success = 'Registration successful!';
+        $emailCheckQuery = "SELECT * FROM users WHERE email = ?";
+        if ($stmt = $conn->prepare($emailCheckQuery)) {
+            $stmt->bind_param("s", $email);
+            $stmt->execute();
+            $stmt->store_result();
+            
+            if ($stmt->num_rows > 0) {
+                $error = 'Email is already registered.';
             } else {
-                $error = 'Database error: ' . $conn->error;
+                // Insert the user into the database
+                $insertQuery = "INSERT INTO users (full_name, email, password, role, company_id) VALUES (?, ?, ?, ?, ?)";
+                if ($stmt = $conn->prepare($insertQuery)) {
+                    $stmt->bind_param("ssssi", $fullName, $email, $hashedPassword, $role, $company_id);
+                    if ($stmt->execute()) {
+                        $success = 'Registration successful!';
+                    } else {
+                        $error = 'Registration failed. Please try again. ' . $stmt->error;
+                    }
+                    $stmt->close();
+                } else {
+                    $error = 'Error preparing query. Please try again.';
+                }
             }
+        } else {
+            $error = 'Error preparing query. Please try again.';
         }
     }
 }
@@ -84,6 +95,30 @@ $conn->close();
                     <input type="password" id="confirm-password" name="c_password" required>
                     <label for="confirm-password">Confirm Password</label>
                 </div>
+
+                <div class="inputbox">
+                    <label for="role">Role:</label>
+                    <select name="role" id="role" required>
+                        <option value="user">User</option>
+                        <option value="support">Support Staff</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>  
+                
+                <div class="inputbox">
+                    <label for="company_id">Company:</label>
+                    <select name="company_id" id="company_id" required>
+                        <option value="1">Sub-Company 1</option>
+                        <option value="2">Sub-Company 2</option>
+                        <option value="3">Sub-Company 3</option>
+                        <option value="4">Sub-Company 4</option>
+                        <option value="5">Sub-Company 5</option>
+                        <option value="6">Primary Company</option>
+                    </select>
+                </div>     
+
+
+
                 <button type="submit">Signup</button>
             </form>
             <div class="login">
