@@ -45,7 +45,7 @@ if (!isset($_SESSION['user_id'])) {
     <section id="raise-ticket" class="ticket">
         <div class="container">
             <h2>Need Assistance?</h2>
-            <p>If you're experiencing technical issues, raise a ticket and our support team will get back to you promptly.</p>
+            <p>If you're experiencing technical issues, raise a ticket and our support team will get back to you promptly.</p><br>
             <a href="new_ticket.php" class="btn">Raise a New Ticket</a>
         </div>
     </section>
