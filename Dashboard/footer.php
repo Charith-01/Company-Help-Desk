@@ -13,7 +13,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 ApexCoders</p>
+            <p>&copy; 2024</p>
         </div>
     </footer>    
 </body>

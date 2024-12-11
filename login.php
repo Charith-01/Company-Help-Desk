@@ -5,6 +5,7 @@ require 'includes/config.php'; // Database configuration
 
 // Initialize error message
 $error = '';
+$success = '';
 
 // Handle form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -33,13 +34,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['email'] = $user['email']; 
                 $_SESSION['Acc_type'] = $user['Acc_type'];
 
-                // Correct redirect paths
+                // Store company_id only for support members
+                if ($user['Acc_type'] === 'Support') {
+                    $_SESSION['company_id'] = $user['company_id'];
+                }
+
+                // Redirect based on user type (Admin, Support, or User)
                 if ($user['Acc_type'] === 'Admin') {
-                    header("Location: Dashboard/dashboard.php"); 
+                    header("Location: ./Dashboard/dashboard.php"); 
+                    exit;
+                } elseif ($user['Acc_type'] === 'Support') {
+                    header("Location: ./Support_Dashboard/support_dashboard.php"); 
+                    exit;
                 } else {
                     header("Location: profile.php"); 
+                    exit;
                 }
-                exit;
             } else {
                 $error = 'Incorrect password.';
             }
@@ -78,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <?php endif; ?>
                     
                     <div class="inputbox">
-                        <input type="email" name="email" required>
+                        <input type="email" name="email" required value="<?= isset($_POST['email']) ? htmlspecialchars($_POST['email']) : '' ?>">
                         <label for="">Email</label>
                     </div>
                     <div class="inputbox">

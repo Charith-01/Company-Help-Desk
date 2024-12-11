@@ -40,8 +40,8 @@ if($acctype != "Admin" && $acctype != "Support"){
 
             <nav>
                 <ul>
-                    <a href="#"><img id="notify" src="./images/notifi.png" alt="logo"/></a>
-                    <a href="myprofile.html"><img id="prof" src="./images/profile.png" alt="logo"/></a>
+                    <a href="#"><img id="notify" src="./Images/notifi.png" alt="logo"/></a>
+                    <a href="myprofile.html"><img id="prof" src="./Images/profile.png" alt="logo"/></a>
                     <a href="../includes/logout.php"><button type="button" id="lout">Logout</button></a>
                     
                 

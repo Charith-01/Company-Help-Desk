@@ -1,10 +1,9 @@
 <?php
-session_start();
 include_once 'logHeader.php';
 
 // Restrict access to admins only
 if (!isset($_SESSION['user_id']) || $_SESSION['Acc_type'] !== 'Admin') {
-    header("Location: /login.php");
+    header("Location: ../login.php");
     exit();
 }
 ?>
