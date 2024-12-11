@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if ($user['Acc_type'] === 'Admin') {
                     header("Location: Dashboard/dashboard.php"); 
                 } else {
-                    header("Location: profile.php"); 
+                    header("Location: profile.php");
                 }
                 exit;
             } else {
