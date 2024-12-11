@@ -1,10 +1,32 @@
 <?php
 include_once 'logHeader.php';
+include('../includes/config.php');
 
 // Restrict access to admins only
 if (!isset($_SESSION['user_id']) || $_SESSION['Acc_type'] !== 'Admin') {
     header("Location: ../login.php");
     exit();
+}
+
+// Fetch all ticket details
+$query = "
+    SELECT 
+        t.ticket_id, t.ticket_title, t.ticket_description, t.ticket_status, t.created_at, 
+        u.full_name AS submitted_by, 
+        c.company_name AS current_company,
+        tt.from_company_id, tt.to_company_id, tt.transferred_at 
+    FROM tickets t
+    LEFT JOIN users u ON t.user_id = u.id
+    LEFT JOIN companies c ON t.company_id = c.company_id
+    LEFT JOIN ticket_transfers tt ON t.ticket_id = tt.ticket_id
+    ORDER BY t.created_at DESC
+";
+
+$result = $conn->query($query);
+
+// Check for SQL errors
+if (!$result) {
+    die("SQL Error: " . $conn->error);
 }
 ?>
 
@@ -13,8 +35,8 @@ if (!isset($_SESSION['user_id']) || $_SESSION['Acc_type'] !== 'Admin') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Help Desk Dashboard</title>
-    <link rel="stylesheet" href="./CSS/d.css"> 
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./CSS/dashboard.css"> 
 </head>
 <body>
 
@@ -29,80 +51,50 @@ if (!isset($_SESSION['user_id']) || $_SESSION['Acc_type'] !== 'Admin') {
 
 <main>
     <div class="container">
-        <div class="dashboard-sidebar">
-            <div class="sidebar-section">
-                <h2>Tickets</h2>
-                <ul>
-                    <li><a href="#">All Tickets (235)</a></li>
-                    <li><a href="#">Recent Tickets</a></li>
-                    <li><a href="#">Open Tickets</a></li>
-                </ul>
-            </div>
-            <div class="sidebar-section">
-                <h2>Ticket Views</h2>
-                <ul>
-                    <li><a href="#">All Cases from Teams</a></li>
-                    <li><a href="#">Support Cases</a></li>
-                </ul>
-            </div>
-            <div class="sidebar-section">
-                <h2>Settings</h2>
-                <ul>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="logout.php">Logout</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="dashboard-main">
-            <h2>Dashboard Overview</h2>
+        <h2>Admin Dashboard - All Tickets Overview</h2>
 
-            <!-- Example Ticket Cards -->
-            <div class="ticket-card">
-                <h2>Ticket #12345</h2>
-                <p>Issue: Unable to connect to VPN</p>
-                <p>Assigned to: John Doe</p>
-                <span class="ticket-status open">Open</span>
-            </div>
-
-            <div class="ticket-card">
-                <h2>Ticket #12346</h2>
-                <p>Issue: Printer not working</p>
-                <p>Assigned to: Jane Smith</p>
-                <span class="ticket-status closed">Closed</span>
-            </div>
-
-            <h2>Recent Tickets</h2>
+        <?php if ($result->num_rows > 0): ?>
             <table class="ticket-table">
                 <thead>
                     <tr>
                         <th>Ticket ID</th>
-                        <th>Issue</th>
+                        <th>Title</th>
+                        <th>Description</th>
                         <th>Status</th>
-                        <th>Assigned To</th>
+                        <th>Submitted By</th>
+                        <th>Current Company</th>
+                        <th>Transfer History</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>#12347</td>
-                        <td>Software installation issue</td>
-                        <td><span class="ticket-status open">Open</span></td>
-                        <td>Mike Johnson</td>
-                    </tr>
-                    <tr>
-                        <td>#12348</td>
-                        <td>Network connectivity problem</td>
-                        <td><span class="ticket-status closed">Closed</span></td>
-                        <td>Emily Davis</td>
-                    </tr>
-                    <tr>
-                        <td>#12349</td>
-                        <td>Hardware malfunction</td>
-                        <td><span class="ticket-status open">Open</span></td>
-                        <td>Chris Brown</td>
-                    </tr>
+                    <?php while ($row = $result->fetch_assoc()): ?>
+                        <tr>
+                            <td>#<?php echo htmlspecialchars($row['ticket_id']); ?></td>
+                            <td><?php echo htmlspecialchars($row['ticket_title']); ?></td>
+                            <td><?php echo htmlspecialchars($row['ticket_description']); ?></td>
+                            <td>
+                                <span class="ticket-status <?php echo strtolower($row['ticket_status']); ?>">
+                                    <?php echo htmlspecialchars($row['ticket_status']); ?>
+                                </span>
+                            </td>
+                            <td><?php echo htmlspecialchars($row['submitted_by']); ?></td>
+                            <td><?php echo htmlspecialchars($row['current_company']); ?></td>
+                            <td>
+                                <?php if ($row['from_company_id'] && $row['to_company_id']): ?>
+                                    From: <?php echo htmlspecialchars($row['from_company_id']); ?><br>
+                                    To: <?php echo htmlspecialchars($row['to_company_id']); ?><br>
+                                    At: <?php echo htmlspecialchars($row['transferred_at']); ?>
+                                <?php else: ?>
+                                    Not Transferred
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                    <?php endwhile; ?>
                 </tbody>
             </table>
-        </div>
+        <?php else: ?>
+            <p>No tickets found.</p>
+        <?php endif; ?>
     </div>
 </main>
 
@@ -110,3 +102,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['Acc_type'] !== 'Admin') {
 
 </body>
 </html>
+
+<?php
+$conn->close();
+?>
