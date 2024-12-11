@@ -27,6 +27,7 @@ body {
     background-color: #f4f4f4;
     padding: 50px 0;
     text-align: center;
+    margin-top: 0;
 }
 
 .hero h2 {
@@ -83,33 +84,41 @@ body {
     font-size: 16px; 
 }
 
+/* Adjust the "Raise a New Ticket" button positioning */
 #raise-ticket .btn {
-    background-color: #e0f7fa; /* Light color for the button */
-    color: #007bff; /* Text color */
+    background-color: #e0f7fa;
+    color: #007bff;
     padding: 10px 20px;
     border-radius: 8px;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
-    border: 2px solid #007bff; /* Optional: Add a border for better contrast */
+    border: 2px solid #007bff;
     transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 200px; /* Adjusted margin to move button down */
 }
 
 #raise-ticket .btn:hover {
-    background-color: #007bff; /* Darker background on hover */
-    color: #ffffff; /* White text on hover */
+    background-color: #007bff;
+    color: #ffffff;
 }
 
-
-
 /* Cards Section */
+
 .section {
     padding: 50px 0;
+    
+}
+
+#knowledgebase h2{
+    margin-left: 150px; 
+    color: #cdcaca;
 }
 
 .cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center-align cards */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
     gap: 20px;
 }
 
@@ -119,6 +128,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex: 1;
+    max-width: 400px; /* Limit card width */
     text-align: center;
     transition: transform 0.3s;
 }

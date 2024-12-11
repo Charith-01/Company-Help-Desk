@@ -1,8 +1,6 @@
 <?php
 include_once 'log_header.php';
 
-?>
-<?php
 include('includes/config.php');
 
 // Check if the user is logged in
@@ -13,14 +11,15 @@ if (!isset($_SESSION['user_id'])) {
 
 $user_id = $_SESSION['user_id'];
 
-// Fetch tickets from the database
-$query = "SELECT id, title, description, created_at FROM tickets WHERE id = ? ORDER BY created_at DESC";
+// Fetch tickets for the logged-in user
+$query = "SELECT ticket_id, ticket_title, ticket_description, created_at FROM tickets WHERE user_id = ? ORDER BY created_at DESC";
 $stmt = $conn->prepare($query);
 
 if (!$stmt) {
     die("Error preparing SQL: " . $conn->error);
 }
 
+// Bind parameters for user_id
 $stmt->bind_param("i", $user_id);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -48,8 +47,6 @@ $result = $stmt->get_result();
         </nav>
     </div>
     
-
-
     <div class="container1">
         <div class="new">
             <h1>My Tickets</h1>
@@ -61,14 +58,14 @@ $result = $stmt->get_result();
                 <?php while ($row = $result->fetch_assoc()): ?>
                     <div class="ticket-card">
                         <div class="ticket-header">
-                            <h3><?php echo htmlspecialchars($row['title']); ?></h3>
+                            <h3><?php echo htmlspecialchars($row['ticket_title']); ?></h3>
                         </div>
                         <div class="ticket-body">
-                            <p><?php echo htmlspecialchars($row['description']); ?></p>
+                            <p><?php echo htmlspecialchars($row['ticket_description']); ?></p>
                             <p class="date">Submitted on: <?php echo htmlspecialchars($row['created_at']); ?></p>
                         </div>
                         <div class="ticket-footer">
-                            <button class="btn view-more" onclick="showDetails(<?php echo htmlspecialchars($row['id']); ?>)">View More</button>
+                            <button class="btn view-more" onclick="showDetails(<?php echo htmlspecialchars($row['ticket_id']); ?>)">View More</button>
                         </div>
                     </div>
                 <?php endwhile; ?>
@@ -78,10 +75,7 @@ $result = $stmt->get_result();
         <?php endif; ?>
     </div>
 
-    <?php
-             include_once 'footer.php';
-
-    ?>
+    <?php include_once 'footer.php'; ?>
 </body>
 </html>
 

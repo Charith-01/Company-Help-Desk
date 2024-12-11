@@ -9,11 +9,13 @@ if (!isset($_SESSION['user_id'])) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user_id = $_SESSION['user_id'];
-    $title = htmlspecialchars($_POST['title']);
-    $description = htmlspecialchars($_POST['description']);
+    $ticket_title = $conn->real_escape_string(trim($_POST['ticket_title']));
+    $ticket_description = $conn->real_escape_string(trim($_POST['ticket_description']));
+    $issue_type = $conn->real_escape_string($_POST['issue_type']);
+    $company_id = $conn->real_escape_string($_POST['company_id']);
 
     // Prepare SQL query
-    $query = "INSERT INTO tickets (id, title, description) VALUES (?, ?, ?)";
+    $query = "INSERT INTO tickets (ticket_title, ticket_description, user_id, issue_type, company_id) VALUES (?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($query);
 
     if (!$stmt) {
@@ -21,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Bind parameters
-    $stmt->bind_param("iss", $user_id, $title, $description);
+    $stmt->bind_param("ssiss", $ticket_title, $ticket_description, $user_id, $issue_type, $company_id);
 
     // Execute query
     if ($stmt->execute()) {
