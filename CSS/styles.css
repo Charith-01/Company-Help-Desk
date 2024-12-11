@@ -19,9 +19,6 @@ body {
     
 }
 
-
-
-
 /* Hero Section */
 .hero {
     background-color: #f4f4f4;
@@ -86,8 +83,8 @@ body {
 
 /* Adjust the "Raise a New Ticket" button positioning */
 #raise-ticket .btn {
-    background-color: #e0f7fa;
-    color: #007bff;
+    background-color: #007bff;
+    color: #ffffff;
     padding: 10px 20px;
     border-radius: 8px;
     text-decoration: none;
@@ -99,8 +96,8 @@ body {
 }
 
 #raise-ticket .btn:hover {
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #007bff;
 }
 
 /* Cards Section */
@@ -144,6 +141,7 @@ body {
 .card a {
     color: #0078d4;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .card a:hover {
