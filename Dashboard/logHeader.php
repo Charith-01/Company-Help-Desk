@@ -4,7 +4,7 @@ session_start();
 require '../includes/config.php';
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
+    header("Location:../login.php");
     exit;
 }
 
@@ -27,7 +27,7 @@ if($acctype != "Admin" && $acctype != "Support"){
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Wedding Whispers & Wonders</title>
+        <title>Dashboard</title>
         
 		<link rel="stylesheet" href="./CSS/logheader.css">
     </head>
@@ -42,7 +42,7 @@ if($acctype != "Admin" && $acctype != "Support"){
                 <ul>
                     <a href="#"><img id="notify" src="./images/notifi.png" alt="logo"/></a>
                     <a href="myprofile.html"><img id="prof" src="./images/profile.png" alt="logo"/></a>
-                    <a href="../includes/logout.php"><button type="button" id="lout">Logout</button></a>
+                    <a href="../logout.php"><button type="button" id="lout">Logout</button></a>
                     
                 
                 </ul>
