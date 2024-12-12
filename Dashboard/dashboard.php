@@ -23,8 +23,6 @@ $query = "
 ";
 
 $result = $conn->query($query);
-
-// Check for SQL errors
 if (!$result) {
     die("SQL Error: " . $conn->error);
 }
@@ -42,16 +40,29 @@ if (!$result) {
 
 <div class="breadcrumb-container">
     <nav class="breadcrumb">
-        <a href="./home.php" class="breadcrumb-logo">
+        <a href="../home.php" class="breadcrumb-logo">
             <img src="./Images/logo.png" alt="Help Desk Logo" class="logo">
         </a>
-        <a href="./home.php" class="breadcrumb-link active">Help Center</a>
+        <a href="../home.php" class="breadcrumb-link">Help Center</a>
+        <span class="breadcrumb-separator">></span>
+        <a href="#" class="breadcrumb-link active">Dashboard</a>
     </nav>
 </div>
 
-<main>
-    <div class="container">
-        <h2>Admin Dashboard - All Tickets Overview</h2>
+<div class="dashboard-container">
+    <!-- Sidebar Section -->
+    <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <ul>
+            <li><a href="dashboard.php" class="active">Tickets</a></li>
+            <li><a href="manage_users.php">Users</a></li>
+            <li><a href="manage_companies.php">Companies</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Section -->
+    <main class="main-content">
+        <h2>All Tickets Overview</h2>
 
         <?php if ($result->num_rows > 0): ?>
             <table class="ticket-table">
@@ -95,8 +106,8 @@ if (!$result) {
         <?php else: ?>
             <p>No tickets found.</p>
         <?php endif; ?>
-    </div>
-</main>
+    </main>
+</div>
 
 <?php include_once 'footer.php'; ?>
 
