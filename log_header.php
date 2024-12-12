@@ -35,6 +35,7 @@ if (!isset($_SESSION['user_id'])) {
             <!-- My Tickets and Logout buttons -->
             <div class="login-container">
                 <a href="view_tickets.php" class="btn secondary">My Tickets</a>
+                <a href="profile.php" class="btn profile"><?php echo ($_SESSION['full_name']); ?></a>
                 <a href="logout.php" class="btn-logout">Logout</a>
             </div>
         </div>
