@@ -1,11 +1,16 @@
 /* support_dashboard.css */
-
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f7fc;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -14,45 +19,6 @@ body {
     padding-top: 50px;
 }
 
-.breadcrumb-container {
-    margin-bottom: 20px;
-}
-
-.breadcrumb {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-}
-
-.breadcrumb-logo img {
-    width: 40px;
-    height: auto;
-    margin-right: 10px;
-}
-
-.breadcrumb-link {
-    text-decoration: none;
-    color: #4e73df;
-    font-size: 16px;
-}
-
-.breadcrumb-separator {
-    margin: 0 10px;
-    color: #4e73df;
-}
-
-.breadcrumb-link.active {
-    color: #2d3e52;
-}
-
-/* Header */
-h1 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
-}
 
 /* Ticket Table */
 .ticket-table {
