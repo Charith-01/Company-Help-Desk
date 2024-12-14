@@ -152,3 +152,87 @@ body {
 .btn:hover {
     opacity: 0.8;
 }
+
+.edit-user-form-container {
+    width: 60%;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.edit-user-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.edit-user-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #555;
+}
+
+.edit-user-form input, .edit-user-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.edit-user-form .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    margin-top: 20px;
+}
+
+.save-btn {
+    background: #28a745;
+}
+
+.cancel-btn {
+    background: #6c757d;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.generate-pdf-btn {
+    background: #1abc9c; /* Greenish shade */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.generate-pdf-btn:hover {
+    background: #16a085; /* Darker greenish shade */
+    transform: translateY(-2px); /* Slight hover lift effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.generate-pdf-btn:active {
+    transform: translateY(0); /* Reset hover effect when clicked */
+    box-shadow: none;
+}
+
+

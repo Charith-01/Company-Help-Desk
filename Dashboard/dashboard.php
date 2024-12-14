@@ -12,7 +12,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['Acc_type'] !== 'Admin') {
 $query = "
     SELECT 
         t.ticket_id, t.ticket_title, t.ticket_description, t.ticket_status, t.created_at, 
-        u.full_name AS submitted_by, 
+        u.user_name AS submitted_by, 
         c.company_name AS current_company,
         tt.from_company_id, tt.to_company_id, tt.transferred_at 
     FROM tickets t
@@ -40,10 +40,10 @@ if (!$result) {
 
 <div class="breadcrumb-container">
     <nav class="breadcrumb">
-        <a href="../home.php" class="breadcrumb-logo">
+        <a href="#" class="breadcrumb-logo">
             <img src="./Images/logo.png" alt="Help Desk Logo" class="logo">
         </a>
-        <a href="../home.php" class="breadcrumb-link">Help Center</a>
+        <a href="#" class="breadcrumb-link">Help Center</a>
         <span class="breadcrumb-separator">></span>
         <a href="#" class="breadcrumb-link active">Dashboard</a>
     </nav>
@@ -106,6 +106,13 @@ if (!$result) {
         <?php else: ?>
             <p>No tickets found.</p>
         <?php endif; ?>
+
+        <!-- Generate Report Button -->
+        <form action="generate_report.php" method="POST">
+            <input type="hidden" name="report_type" value="tickets">
+            <button type="submit" class="generate-pdf-btn">Generate Report</button>
+        </form> 
+
     </main>
 </div>
 

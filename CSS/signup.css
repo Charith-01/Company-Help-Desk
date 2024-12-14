@@ -10,21 +10,36 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: calc(100vh - 40px); /* Adjust height to account for header/footer */
     width: 100%;
     background: url("../images/background.jpg") no-repeat;
     background-position: center;
     background-size: cover;
+    padding: 20px; /* Add padding to create space around the form */
 }
 
 .form-box {
     position: relative;
-    width: 400px;
+    width: 600px;
+    height: auto; /* Make height dynamic to adjust based on content */
     background-color: white;
     border-radius: 8px;
-    padding: 20px 30px;
+    padding: 30px 40px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin: 20px 0; /* Add vertical margin to prevent clipping at edges */
+}
+
+
+.input-group {
+    display: flex; /* Make a flex container for inputs */
+    justify-content: space-between; /* Add space between the inputs */
+    gap: 20px; /* Space between First Name and Last Name fields */
+    margin-bottom: 20px; /* Add margin below */
+}
+
+.input-group .inputbox {
+    flex: 1; /* Make each input field take equal space */
 }
 
 h2 {

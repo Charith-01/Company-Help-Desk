@@ -6,53 +6,71 @@ $error = '';
 $success = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $fullName = $conn->real_escape_string(trim($_POST['full_name']));
+    $firstName = $conn->real_escape_string(trim($_POST['first_name']));
+    $lastName = $conn->real_escape_string(trim($_POST['last_name']));
+    $userName = $conn->real_escape_string(trim($_POST['user_name']));
     $email = $conn->real_escape_string(trim($_POST['email']));
     $password = trim($_POST['password']);
     $confirmPassword = trim($_POST['c_password']);
     $role = $conn->real_escape_string($_POST["role"]);
     $company_id = $conn->real_escape_string($_POST["company_id"]);
 
-    // Validate input
-    if (empty($fullName) || empty($email) || empty($password) || empty($confirmPassword)) {
+    // Validate inputs
+    if (empty($firstName) || empty($lastName) || empty($userName) || empty($email) || empty($password) || empty($confirmPassword)) {
         $error = 'All fields are required.';
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $error = 'Invalid email format.';
     } elseif ($password !== $confirmPassword) {
         $error = 'Passwords do not match.';
     } else {
-        // Hash the password securely
-        $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-
-        // Check if the email already exists
-        $emailCheckQuery = "SELECT * FROM users WHERE email = ?";
-        if ($stmt = $conn->prepare($emailCheckQuery)) {
-            $stmt->bind_param("s", $email);
+        // Check if the username already exists
+        $userNameCheckQuery = "SELECT * FROM users WHERE user_name = ?";
+        if ($stmt = $conn->prepare($userNameCheckQuery)) {
+            $stmt->bind_param("s", $userName);
             $stmt->execute();
             $stmt->store_result();
-            
             if ($stmt->num_rows > 0) {
-                $error = 'Email is already registered.';
-            } else {
-                // Insert the user into the database
-                $insertQuery = "INSERT INTO users (full_name, email, password, role, company_id) VALUES (?, ?, ?, ?, ?)";
-                if ($stmt = $conn->prepare($insertQuery)) {
-                    $stmt->bind_param("ssssi", $fullName, $email, $hashedPassword, $role, $company_id);
-                    if ($stmt->execute()) {
-                        $success = 'Registration successful!';
-                    } else {
-                        $error = 'Registration failed. Please try again. ' . $stmt->error;
-                    }
-                    $stmt->close();
-                } else {
-                    $error = 'Error preparing query. Please try again.';
-                }
+                $error = 'Username is already registered.';
             }
+            $stmt->close();
         } else {
             $error = 'Error preparing query. Please try again.';
         }
+
+        // If no errors, proceed to check email and insert data
+        if (!$error) {
+            $emailCheckQuery = "SELECT * FROM users WHERE email = ?";
+            if ($stmt = $conn->prepare($emailCheckQuery)) {
+                $stmt->bind_param("s", $email);
+                $stmt->execute();
+                $stmt->store_result();
+
+                if ($stmt->num_rows > 0) {
+                    $error = 'Email is already registered.';
+                } else {
+                    // Hash the password securely
+                    $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+
+                    // Insert the user into the database
+                    $insertQuery = "INSERT INTO users (first_name, last_name, user_name, email, password, role, company_id) VALUES (?, ?, ?, ?, ?, ?, ?)";
+                    if ($stmt = $conn->prepare($insertQuery)) {
+                        $stmt->bind_param("ssssssi", $firstName, $lastName, $userName, $email, $hashedPassword, $role, $company_id);
+                        if ($stmt->execute()) {
+                            $success = 'Registration successful!';
+                        } else {
+                            $error = 'Registration failed. Please try again.';
+                        }
+                        $stmt->close();
+                    }
+                }
+            } else {
+                $error = 'Error preparing query. Please try again.';
+            }
+        }
     }
 }
+
+
 
 $conn->close();
 ?>
@@ -79,9 +97,22 @@ $conn->close();
             <?php endif; ?>
 
             <form action="" method="POST" id="signup-form">
+                <div class="input-group">
+                    <div class="inputbox">
+                        <input type="text" id="first_name" name="first_name" required>
+                        <label for="first_name">First Name</label>
+                    </div>
+
+                    <div class="inputbox">
+                        <input type="text" id="last_name" name="last_name" required>
+                        <label for="last_name">Last Name</label>
+                    </div>
+                </div>
+              
+            
                 <div class="inputbox">
-                    <input type="text" id="full-name" name="full_name" required>
-                    <label for="full-name">Full Name</label>
+                    <input type="text" id="user_name" name="user_name" required>
+                    <label for="user_name">User Name</label>
                 </div>
                 <div class="inputbox">
                     <input type="email" id="email" name="email" required>

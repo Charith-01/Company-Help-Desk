@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['Acc_type'] !== 'Admin') {
 }
 
 // Fetch all users from the database
-$query = "SELECT id, full_name, email, role, company_id, date_created FROM users ORDER BY date_created DESC";
+$query = "SELECT id, user_name, email, role, company_id, date_created FROM users ORDER BY date_created DESC";
 $result = $conn->query($query);
 
 // Check for SQL errors
@@ -30,10 +30,10 @@ if (!$result) {
 
 <div class="breadcrumb-container">
     <nav class="breadcrumb">
-        <a href="../home.php" class="breadcrumb-logo">
+        <a href="#" class="breadcrumb-logo">
             <img src="./Images/logo.png" alt="Help Desk Logo" class="logo">
         </a>
-        <a href="../home.php" class="breadcrumb-link">Help Center</a>
+        <a href="#" class="breadcrumb-link">Help Center</a>
         <span class="breadcrumb-separator">></span>
         <a href="#" class="breadcrumb-link active">Dashboard</a>
     </nav>
@@ -58,7 +58,7 @@ if (!$result) {
                 <thead>
                     <tr>
                         <th>User ID</th>
-                        <th>Full Name</th>
+                        <th>User Name</th>
                         <th>Email</th>
                         <th>Role</th>
                         <th>Company ID</th>
@@ -70,7 +70,7 @@ if (!$result) {
                     <?php while ($row = $result->fetch_assoc()): ?>
                         <tr>
                             <td>#<?php echo htmlspecialchars($row['id']); ?></td>
-                            <td><?php echo htmlspecialchars($row['full_name']); ?></td>
+                            <td><?php echo htmlspecialchars($row['user_name']); ?></td>
                             <td><?php echo htmlspecialchars($row['email']); ?></td>
                             <td><?php echo htmlspecialchars($row['role']); ?></td>
                             <td><?php echo htmlspecialchars($row['company_id']); ?></td>
@@ -87,6 +87,13 @@ if (!$result) {
         <?php else: ?>
             <p>No users found.</p>
         <?php endif; ?>
+
+    <!-- Generate Report Button -->
+    <form action="generate_report.php" method="POST">
+        <input type="hidden" name="report_type" value="users">
+        <button type="submit" class="generate-pdf-btn">Generate Report</button>
+    </form>        
+        
 
     </main>    
     

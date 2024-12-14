@@ -11,7 +11,7 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 // Retrieve user details from session
-$fullName = $_SESSION['full_name'];
+$userName = $_SESSION['user_name'];
 $email = $_SESSION['email'];
 ?>
 
@@ -41,7 +41,7 @@ $email = $_SESSION['email'];
         <div class="profile-container">
             <div class="profile-header">
                 <img src="Images/icon.png" alt="User Avatar" class="profile-avatar">
-                <h2>Welcome, <?php echo htmlspecialchars($fullName); ?>!</h2>
+                <h2>Welcome, <?php echo htmlspecialchars($userName); ?>!</h2>
             </div>
             <div class="profile-details">
                 <p><strong>Email:</strong> <?php echo htmlspecialchars($email); ?></p>

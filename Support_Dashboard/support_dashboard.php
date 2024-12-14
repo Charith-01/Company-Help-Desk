@@ -40,10 +40,10 @@ $result = $stmt->get_result();
 
 <div class="breadcrumb-container">
     <nav class="breadcrumb">
-        <a href="../home.php" class="breadcrumb-logo">
+        <a href="#" class="breadcrumb-logo">
             <img src="./Images/logo.png" alt="Help Desk Logo" class="logo">
         </a>
-        <a href="../home.php" class="breadcrumb-link">Help Center</a>
+        <a href="#" class="breadcrumb-link">Help Center</a>
         <span class="breadcrumb-separator">></span>
         <a href="#" class="breadcrumb-link active">Support Dashboard</a>
     </nav>

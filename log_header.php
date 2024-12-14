@@ -32,11 +32,17 @@ if (!isset($_SESSION['user_id'])) {
                 </ul>
             </nav> -->
             
-            <!-- My Tickets and Logout buttons -->
+            <!-- My Tickets, Logout buttons, and Profile Picture -->
             <div class="login-container">
                 <a href="view_tickets.php" class="btn secondary">My Tickets</a>
                 <a href="logout.php" class="btn-logout">Logout</a>
+
+                <!-- Profile Picture Icon -->
+                <a href="profile.php" class="profile-icon">
+                    <img src="Images/profile.png" alt="Profile" title="View Profile">
+                </a>
             </div>
+
         </div>
     </header>
 </body>
