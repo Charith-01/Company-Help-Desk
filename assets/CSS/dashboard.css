@@ -72,13 +72,13 @@ body {
     top: 0;
     width: 5px;
     height: 100%;
-    background: #3498db;
+    background: #34db66;
     transform: scaleY(0);
     transition: all 0.3s ease-in-out;
 }
 
 .sidebar ul li a:hover, .sidebar ul li a.active {
-    background: #3498db;
+    background: #34db66;
     color: white;
 }
 

@@ -24,7 +24,7 @@ align-items: center;
 }
 
 .header .logo h1 a {
-color: #0078d4; /* Keep the text color consistent */
+color: #00d466; /* Keep the text color consistent */
 text-decoration: none; /* Remove underline */
 font-size: 28px; /* Adjust size for emphasis */
 font-weight: bold; /* Make it stand out */
@@ -66,7 +66,7 @@ top: 50%;
 /* Updated styling for 'Login' and 'Sign Up' buttons */
 .login-container a.btn.secondary1 {
 display: inline-block;
-background-color: #0078d4; /* Professional blue */
+background-color: #00d466; /* Professional blue */
 color: #ffffff; /* White text */
 padding: 10px 20px; /* Better padding for appearance */
 border-radius: 25px; /* Rounded buttons */
@@ -79,7 +79,7 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .login-container a.btn.secondary1:hover {
-background-color: #005bb5; /* Darker shade for hover */
+background-color: #066d29; /* Darker shade for hover */
 box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow */
 transform: scale(1.05); /* Slight zoom effect */
 }
@@ -145,7 +145,7 @@ color: #f39c12;
 
 /* Base button styles */
 .nav-links .btn {
-background-color: #0078d4;
+background-color: #00d466;
 padding: 8px 16px;
 border-radius: 5px;
 font-weight: bold;
@@ -156,7 +156,7 @@ transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
 
 /* Hover effect for buttons */
 .nav-links .btn:hover {
-background-color: #005bb5;
+background-color: #066d29;
 transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
@@ -175,7 +175,7 @@ transition: color 0.3s ease, transform 0.3s ease;
 
 /* Hover effect for links */
 .nav-links a:hover {
-color: #0078d4;
+color: #00d466;
 transform: scale(1.1);
 }
 
@@ -230,7 +230,7 @@ transition: color 0.3s;
 }
 
 .breadcrumb-link:hover {
-color: #007bff;
+color: #00ffb7;
 }
 
 .breadcrumb-separator {
@@ -306,7 +306,7 @@ font-size: 16px;
 }
 
 .inputbox input:focus {
-border-color: #0171d3;
+border-color: #066d29;
 }
 
 .inputbox label {
@@ -326,7 +326,7 @@ color: #333;
 button {
 width: 100%;
 padding: 10px;
-background: #0171d3;
+background: #066d29;
 border: none;
 border-radius: 8px;
 color: #fff;
@@ -336,7 +336,7 @@ transition: 0.3s;
 }
 
 button:hover {
-background: #0171d3;
+background: #066d29;
 }
 
 .forget,
@@ -348,7 +348,7 @@ margin: 15px 0;
 .forget a,
 .register a {
 text-decoration: none;
-color: #0171d3;
+color: #066d29;
 font-weight: bold;
 }
 

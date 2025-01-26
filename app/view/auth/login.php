@@ -96,7 +96,7 @@ window.location.href = 'login.php';
         <div class="container">
             <div class="logo">
                 <a href="../../../index.php"><img src="../../../assets/Images/logo.png" alt="Logo"></a>
-                <h1><a href="../../../index.php">Hellodesk.</a></h1>
+                <h1><a href="../../../index.php">Help desk</a></h1>
             </div>
 
             <div class="login-container">

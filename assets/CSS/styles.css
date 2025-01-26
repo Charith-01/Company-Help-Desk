@@ -45,7 +45,7 @@ body {
 
 .hero form button {
     padding: 10px 20px;
-    background-color: #0078d4;
+    background-color: #00d466;
     border: none;
     color: white;
     border-radius: 5px;
@@ -53,7 +53,7 @@ body {
 }
 
 .hero form button:hover {
-    background-color: #005bb5;
+    background-color: #066d29;
 }
 
 /* Ticket Section */
@@ -77,27 +77,27 @@ body {
 }
 
 #raise-ticket p {
-    color: #b7b7b7; /* Change this to your desired color */
+    color: #363636; /* Change this to your desired color */
     font-size: 16px; 
 }
 
 /* Adjust the "Raise a New Ticket" button positioning */
 #raise-ticket .btn {
-    background-color: #007bff;
+    background-color: #0a6637;
     color: #ffffff;
     padding: 10px 20px;
     border-radius: 8px;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
-    border: 2px solid #007bff;
+    border: 2px solid #0a6637;
     transition: background-color 0.3s ease, color 0.3s ease;
     margin-top: 200px; /* Adjusted margin to move button down */
 }
 
 #raise-ticket .btn:hover {
     background-color: #ffffff;
-    color: #007bff;
+    color: #0b5d33;
 }
 
 /* Cards Section */
@@ -139,7 +139,7 @@ body {
 }
 
 .card a {
-    color: #0078d4;
+    color: #00d466;
     font-weight: bold;
     text-decoration: none;
 }

@@ -21,7 +21,7 @@ if (!isset($_SESSION['user_id'])) {
         <div class="container">
             <div class="logo">
                 <a href="../pages/home.php"><img src="../../../assets/Images/logo.png" alt="Logo"></a>
-                <h1><a href="../pages/home.php">Hellodesk.</a></h1>    
+                <h1><a href="../pages/home.php">Help desk</a></h1>    
             </div>
             <!-- <nav>
                 <ul class="nav-links">

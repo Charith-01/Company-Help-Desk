@@ -16,7 +16,7 @@
 }
 
 .header .logo h1 a {
-    color: #0078d4; /* Keep the text color consistent */
+    color: #00d466; /* Keep the text color consistent */
     text-decoration: none; /* Remove underline */
     font-size: 28px; /* Adjust size for emphasis */
     font-weight: bold; /* Make it stand out */
@@ -59,7 +59,7 @@
 /* Updated styling for 'Login' and 'Sign Up' buttons */
 .login-container a.btn.secondary1 {
     display: inline-block;
-    background-color: #0078d4; /* Professional blue */
+    background-color: #00d466; /* Professional blue */
     color: #ffffff; /* White text */
     padding: 10px 20px; /* Better padding for appearance */
     border-radius: 25px; /* Rounded buttons */
@@ -74,7 +74,7 @@
 }
 
 .login-container a.btn.secondary1:hover {
-    background-color: #005bb5; /* Darker shade for hover */
+    background-color: #066d29; /* Darker shade for hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow */
     transform: scale(1.05); /* Slight zoom effect */
 }
@@ -140,7 +140,7 @@
 
 /* Base button styles */
 .nav-links .btn {
-    background-color: #0078d4;
+    background-color: #00d455;
     padding: 8px 16px;
     border-radius: 5px;
     font-weight: bold;
@@ -151,13 +151,13 @@
 
 /* Hover effect for buttons */
 .nav-links .btn:hover {
-    background-color: #005bb5;
+    background-color: #066d29;
     transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 /* Active button (clicked state) */
 .nav-links .btn.active {
-    background-color: #00aaff; /* Light Blue color */
+    background-color: #00ff91; /* Light Blue color */
 }
 
 /* Transition and transform effects for links */
@@ -170,7 +170,7 @@
 
 /* Hover effect for links */
 .nav-links a:hover {
-    color: #0078d4;
+    color: #00d483;
     transform: scale(1.1);
 }
 
@@ -225,7 +225,7 @@
   }
   
   .breadcrumb-link:hover {
-    color: #007bff;
+    color: #00d466;
   }
   
   .breadcrumb-separator {

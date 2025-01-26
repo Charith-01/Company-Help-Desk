@@ -101,11 +101,11 @@ h1 .icon {
 
 .category ul li a {
   text-decoration: none;
-  color: #0073e6;
+  color: #00e696;
   font-size: 1rem;
   transition: color 0.3s;
 }
 
 .category ul li a:hover {
-  color: #005bb5;
+  color: #066d29;
 }

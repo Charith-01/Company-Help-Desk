@@ -70,13 +70,13 @@ body {
     top: 0;
     width: 5px;
     height: 100%;
-    background: #3498db;
+    background: #34db66;
     transform: scaleY(0);
     transition: all 0.3s ease-in-out;
 }
 
 .sidebar ul li a:hover, .sidebar ul li a.active {
-    background: #3498db;
+    background: #34db66;
     color: white;
 }
 
@@ -180,7 +180,7 @@ body {
 
 .companies-table .btn {
     padding: 8px 12px;
-    background: #3498db;
+    background: #34db66;
     color: white;
     border-radius: 5px;
     text-decoration: none;
@@ -231,13 +231,13 @@ body {
 }
 
 .edit-company-container .form-group input:focus {
-    border-color: #3498db;
+    border-color: #34db66;
     outline: none;
 }
 
 .edit-company-container .btn {
     padding: 10px 20px;
-    background: #3498db;
+    background: #;
     color: white;
     border: none;
     border-radius: 5px;
