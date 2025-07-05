@@ -19,7 +19,7 @@ include_once 'header.php';
                 <a href="./home.php" class="breadcrumb-logo">
                     <img src="./Images/logo.png" alt="Help Desk Logo" class="logo">
                 </a>
-                <a href="./home.php" class="breadcrumb-link active">Help Cente</a>
+                <a href="./home.php" class="breadcrumb-link active">Help Centerr</a>
             </nav>
         </div>
     
